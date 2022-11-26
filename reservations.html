@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Reservations: The Ouran Cafe </title>
+    <style>
+      *{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+    }
+
+    section{
+        height: 100vh;
+        width: 100%;
+        background-image: url(images/background.png);
+        background-position: center;
+        background-size: cover;
+        padding-left: 5%;
+        padding-right: 5%;
+        box-sizing: border-box;
+        position: relative;
+
+    }
+
+    .navbar{
+        width: 100%;
+        height: 15vh;
+        margin: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo{
+        width: 193px;
+        cursor: pointer;
+        margin-top: auto;
+        margin-left: 23px;
+    }
+
+    .menu{
+        width: 64px;
+        cursor: pointer;
+    }
+    
+    nav{
+        flex: 1;
+        padding-left: 67px;
+    }
+
+    nav ul li{
+        display: inline-block;
+        list-style: none;
+        margin: 5px 15px;
+    }
+
+    .navbar a { 
+        color: #F6B0A5;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 18px;
+        text-decoration: none;
+    }
+
+    .navbar a:hover {
+        color: rgba(122, 147, 202, 0.879)
+    }
+
+    .active {
+        background-color: #F8E5E9;
+        border-radius: 6px;
+        padding: 8px 16px;
+        box-sizing: border-box;
+    }
+    iframe{
+        margin-left: 300px;
+        border: 0;
+
+    }
+   h1{font-size: 30px;
+    margin-left: 180px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: #F6B0A5;} 
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="navbar">
+            <img src="images/wordlogo4.svg" class="logo" alt="logopic">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a class="active" href="#">Reservations</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                    </ul>
+                
+            </nav>
+            <a href="menu.html"><img src="images/menu.png" class="menu" alt="menupic"></a>
+        </div>
+        <h1>Fill in this short google form to set up your date!</h1>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdqvEU9yn4W7bJ-r3qJ-GQiP8MvBaZxesu6G0POC4XS2bcj3g/viewform?embedded=true" width="1080" height="730" ></iframe>
+    </section>
+</body>
+</html>

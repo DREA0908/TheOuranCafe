@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+section{
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/background.png);
+    background-position: center;
+    background-size: cover;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+    position: relative;
+
+}
+.navbar{
+    width: 100%;
+    height: 15vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 193px;
+    cursor: pointer;
+    margin-top: auto;
+    margin-left: 23px;
+}
+.menu{
+    width: 64px;
+    cursor: pointer;
+}
+nav{
+    flex: 1;
+    padding-left: 67px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 5px 15px;
+}
+.navbar a { 
+    color: #F6B0A5;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: rgba(122, 147, 202, 0.879)
+}
+.active {
+    background-color: #ca8ce227;
+    border-radius: 6px;
+    padding: 8px 16px;
+    box-sizing: border-box;
+}
+
+  
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+ * {
+	 position: relative;
+	 box-sizing: border-box;
+}
+ .iframely-embed {
+	 position: fixed;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 z-index: 50;
+	 background: white;
+}
+ #content {
+	 z-index: 100;
+ }
+ #content {
+	 display: grid;
+	 grid-template-columns: 1fr 2fr;
+	 align-items: center;
+	 height: 80vh;
+	 width: 100%;
+	 background: #ede8e200;
+	 color: #f6b0a5;
+}
+ body {
+	 display: grid;
+
+}
+ .title {
+	 padding-left: 1em;
+	 grid-column: -1;
+	 grid-row: 1;
+	 font-family: "Prata", serif;
+	 font-size: 48px;
+	 width: 100%;
+	 z-index: 2;
+}
+ .title > .title-inner {
+	 display: inline-block;
+}
+ @keyframes text-clip {
+	 from {
+		 clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+	}
+	 to {
+		 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+}
+ @keyframes outer-left {
+	 from {
+		 transform: translateX(25%);
+	}
+	 to {
+		 transform: none;
+	}
+}
+ @keyframes inner-left {
+	 from {
+		 transform: translateX(-50%);
+	}
+	 to {
+		 transform: none;
+	}
+}
+ .cafe, .ouran {
+	 animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+ .title-inner {
+	 display: inline-block;
+	 animation: inner-left 1s 1s ease both;
+}
+ .cafe-inner {
+	 display: inline-block;
+	 animation: inner-left 1s 1s ease both, text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+ .ouran-inner {
+	 animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+ .title {
+	 animation: outer-left 1s 1s ease both;
+}
+ .cafe > .cafe-inner {
+	 display: inline-block;
+}
+ .ouran {
+	 display: inline-block;
+}
+ .image {
+	 grid-row: 1;
+	 grid-column: 2;
+	 margin-left: -5rem;
+	 opacity: 0.7;
+	 animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+}
+ @keyframes image-in {
+	 from {
+		 clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	}
+	 to {
+		 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+}
+ .image img {
+	 display: block;
+	 width: 100%;
+	 height: auto;
+}
+ body:active * {
+	 animation: none !important;
+}
+ 
