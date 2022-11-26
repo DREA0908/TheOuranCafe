@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Gallery: The Ouran Cafe </title>
+    <style>
+      *{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+    }
+
+    section{
+        height: 100vh;
+        width: 100%;
+        background-image: url(images/background.png);
+        background-position: center;
+        background-size: cover;
+        padding-left: 5%;
+        padding-right: 5%;
+        box-sizing: border-box;
+        position: relative;
+
+    }
+
+    .navbar{
+        width: 100%;
+        height: 15vh;
+        margin: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo{
+        width: 193px;
+        cursor: pointer;
+        margin-top: auto;
+        margin-left: 23px;
+    }
+
+    .menu{
+        width: 64px;
+        cursor: pointer;
+    }
+    
+    nav{
+        flex: 1;
+        padding-left: 67px;
+    }
+
+    nav ul li{
+        display: inline-block;
+        list-style: none;
+        margin: 5px 15px;
+    }
+
+    .navbar a { 
+        color: #F6B0A5;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 18px;
+        text-decoration: none;
+    }
+
+    .navbar a:hover {
+        color: rgba(122, 147, 202, 0.879)
+    }
+
+    .active {
+        background-color: #F8E5E9;
+        border-radius: 6px;
+        padding: 8px 16px;
+        box-sizing: border-box;
+    }
+
+        .slideshow-container {
+            max-width: 1920px;
+            position: relative;
+            margin-left: 400px;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: rgb(225, 180, 180);
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: #F8E5E9;
+        }
+
+        .numbertext {
+            color: #000000;
+            font-size: 20px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+</style>
+<body>
+
+    <section>
+        <div class="navbar">
+            <img src="images/wordlogo4.svg" class="logo" alt="logopic">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a class="active" href="#">Gallery</a></li>
+                    <li><a href="reservations.html">Reservations</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                    </ul>
+                
+            </nav>
+            <a href="menu.html"><img src="images/menu.png" class="menu" alt="menupic"></a>
+        </div>
+
+<br>
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext"><h1>1 / 6</h1></div>
+      <img alt="gallery1" src="gallery/gallery1.png" style="width:100%">
+    </div>
+  
+    <div class="mySlides fade">
+        <div class="numbertext"><h1>2 / 6</h1></div>
+        <img alt="gallery2" src="gallery/gallery2.png" style="width:100%">
+      </div>
+  
+      <div class="mySlides fade">
+        <div class="numbertext"><h1>3 / 6</h1></div>
+        <img alt="gallery3" src="gallery/gallery3.png" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"><h1>4 / 6</h1></div>
+        <img alt="gallery4" src="gallery/gallery4.png" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"><h1>5 / 6</h1></div>
+        <img alt="gallery5" src="gallery/gallery5.png" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"><h1>6 / 6</h1></div>
+        <img alt="gallery1" src="gallery/gallery6.png" style="width:100%">
+      </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+
+</section>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+</body>
+</html>
